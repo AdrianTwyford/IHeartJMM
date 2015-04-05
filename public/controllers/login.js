@@ -9,9 +9,10 @@
             restrict: 'E',
             templateUrl: '../views/login.html',
             controller: function () {
-                this.login = function (username) {
+                this.login = function () {
                     Auth.login({
-                        user: username
+                        email: this.email,
+                        password: this.password
                     });
                 }
             },

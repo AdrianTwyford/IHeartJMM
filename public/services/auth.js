@@ -7,6 +7,7 @@
     app.factory('Auth', ['$http', '$location', '$rootScope', '$cookieStore', '$alert',
         function ($http, $location, $rootScope, $cookieStore, $alert) {
             $rootScope.currentUser = $cookieStore.get('user');
+            $cookieStore.remove('user');
 
             return {
                 login: function (user) {
@@ -33,6 +34,10 @@
                             });
                         });
                 }
+
+                // signup
+
+                // logout
             };
         }]);
 })();

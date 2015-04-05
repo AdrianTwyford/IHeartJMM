@@ -4,16 +4,16 @@
             <div class="panel-body">
                 <h2 class="text-center">Login</h2>
 
-                <form method="post" ng-submit="loginCtrl.login(username)" name="loginForm">
+                <form method="post" ng-submit="loginCtrl.login()" name="loginForm">
 
                     <div class="form-group">
                         <input class="form-control input-lg" type="email" name="email"
-                               ng-model="email" placeholder="User name" required autofocus autocomplete="off">
+                               ng-model="loginCtrl.email" placeholder="User name" required autofocus autocomplete="off">
                     </div>
 
                     <div class="form-group">
                         <input class="form-control input-lg" type="password" name="password"
-                               ng-model="password" placeholder="Password" required autofocus autocomplete="off">
+                               ng-model="loginCtrl.password" placeholder="Password" required autofocus autocomplete="off">
                     </div>
 
                     <button type="submit" ng-disabled="loginForm.$invalid"
