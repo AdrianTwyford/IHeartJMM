@@ -27,7 +27,7 @@
                         .error(function () {
                             $alert({
                                 title: 'Error!',
-                                content: 'Invalid username or server problem',
+                                content: 'Invalid email or password',
                                 placement: 'top-right',
                                 type: 'danger',
                                 duration: 3
