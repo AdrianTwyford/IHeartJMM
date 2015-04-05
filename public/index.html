@@ -12,7 +12,9 @@
 </head>
 <body>
 
-<login></login>
+<login ng-show="!currentUser"></login>
+
+<div ng-view ng-if="currentUser"></div>
 
 <script src="vendor/angular.js"></script>
 <script src="vendor/angular-strap.js"></script>
