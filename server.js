@@ -21,6 +21,18 @@ app.use(bodyParser.urlencoded());
 
 app.post('/api/login', login_hdlr.login);
 
+app.get('/api/logout', function(req, res, next) {
+    //req.logOut();
+    res.send(200);
+});
+
+app.use(function(req, res, next) {
+    if (req.user) {
+        res.cookie('user', JSON.stringify(req.user));
+    }
+    next();
+});
+
 app.set('port', process.env.PORT || 8080);
 app.use(express.static(path.join(__dirname, 'public')));
 

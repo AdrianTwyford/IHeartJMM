@@ -12,6 +12,22 @@
 </head>
 <body>
 
+<div ng-controller="NavbarCtrl" class="navbar navbar-default navbar-static-top"
+     role="navigation" bs-navbar>
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/">JMM</a>
+    </div>
+    <ul class="nav navbar-nav pull-right" ng-if="!currentUser">
+        <li data-match-route="/login"><a href="/login">Login</a></li>
+        <li data-match-route="/signup"><a href="/signup">Sign up</a></li>
+    </ul>
+    <ul class="nav navbar-nav pull-right" ng-if="currentUser">
+        <li class="navbar-text" ng-bind="currentUser.email"></li>
+        <li><a href="javascript:void(0)" ng-click="logout()">Logout</a></li>
+    </ul>
+</div>
+
+
 <login ng-show="!currentUser"></login>
 
 <div ng-view ng-if="currentUser"></div>
@@ -27,6 +43,7 @@
 <script src="app.js"></script>
 <script src="controllers/login.js"></script>
 <script src="controllers/main.js"></script>
+<script src="controllers/navbar.js"></script>
 
 <script src="services/auth.js"></script>
 

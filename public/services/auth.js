@@ -33,11 +33,23 @@
                                 duration: 3
                             });
                         });
-                }
+                },
 
                 // signup
 
                 // logout
+                logout: function() {
+                    return $http.get('/api/logout').success(function() {
+                        $rootScope.currentUser = null;
+                        $cookieStore.remove('user');
+                        $alert({
+                            content: 'You have been logged out.',
+                            placement: 'top-right',
+                            type: 'info',
+                            duration: 3
+                        });
+                    });
+                }
             };
         }]);
 })();
