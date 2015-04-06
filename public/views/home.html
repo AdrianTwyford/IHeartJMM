@@ -2,4 +2,10 @@
     <div class="col-md-6">
         <p>This is a home page test</p>
     </div>
+
+    <div class="col-md-6" ng-controller="ClassesController">
+        <ul>
+            <li ng-repeat="class in ClassesController.getClasses()">boo</li>
+        </ul>
+    </div>
 </div>
