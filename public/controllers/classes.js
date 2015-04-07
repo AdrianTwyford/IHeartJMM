@@ -5,17 +5,17 @@
     var app = angular.module('class-controller', []);
 
     app.controller('ClassesController', ['$http', '$rootScope', '$alert', function ($http, $rootScope, $alert) {
+
         var classes = this;
 
         classes.classesData = [];
-
+        
         var url = 'http://localhost:8080/v1/classes.json';
 
         if ($rootScope.currentUser) {
             $http.get(url)
                 .success(function (data) {
-                    classes.classesData = data.classes;
-
+                    classes.classesData = data.data.classes;
                 })
                 .error(function () {
                     $alert({
@@ -27,11 +27,5 @@
                     });
                 });
         }
-
-        this.getClasses = function() {
-            return classes.classesData;
-        }
-
     }]);
-
 })();
