@@ -9,8 +9,8 @@
         var classes = this;
 
         classes.classesData = [];
-        
-        var url = 'http://localhost:8080/v1/classes.json';
+
+        var url = '/v1/classes.json';
 
         if ($rootScope.currentUser) {
             $http.get(url)
