@@ -15,15 +15,15 @@ exports.homework_by_student = function(req, res) {
                     "homework": [
                         {
                             "homeworkName": "Calculus",
-                            "grade": "95%"
+                            "mark": "95%"
                         },
                         {
                             "homeworkName": "Mechanics",
-                            "grade": "95%"
+                            "mark": "95%"
                         },
                         {
                             "homeworkName": "Statistics",
-                            "grade": "15%"
+                            "mark": "15%"
                         }
                     ]
                 },
@@ -32,7 +32,7 @@ exports.homework_by_student = function(req, res) {
                     "homework": [
                         {
                             "homeworkName": "Whatever biology people do",
-                            "grade": "95%"
+                            "mark": "95%"
                         }
                     ]
                 }
@@ -55,7 +55,7 @@ exports.homework_by_teacher = function(req, res) {
                             "students": [
                                 {
                                     "name": "bobby",
-                                    "grade": "95%"
+                                    "mark": "95%"
                                 }
                             ]
                         },
@@ -64,7 +64,7 @@ exports.homework_by_teacher = function(req, res) {
                             "students": [
                                 {
                                     "name": "bobby",
-                                    "grade": "95%"
+                                    "mark": "95%"
                                 }
                             ]
                         },
@@ -73,7 +73,7 @@ exports.homework_by_teacher = function(req, res) {
                             "students": [
                                 {
                                     "name": "bobby",
-                                    "grade": "25%"
+                                    "mark": "25%"
                                 }
                             ]
                         }
@@ -87,7 +87,7 @@ exports.homework_by_teacher = function(req, res) {
                             "students": [
                                 {
                                     "name": "bobby",
-                                    "grade": "55%"
+                                    "mark": "55%"
                                 }
                             ]
                         }

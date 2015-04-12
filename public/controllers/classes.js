@@ -27,5 +27,15 @@
                     });
                 });
         }
+
+        this.set = "Dummy Class 1";
+
+        this.isSet = function(name) {
+            return name == this.set;
+        };
+
+        this.setClass = function(name) {
+            this.set = name;
+        };
     }]);
 })();
