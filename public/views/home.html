@@ -2,13 +2,22 @@
     <div class="col-md-3 classes-submenu">
         <ul>
             <li ng-repeat="class in mainCtrl.classesData">
-                <a ng-class="{ active:mainCtrl.isSet(class.className) }"
-                   href="" ng-click="mainCtrl.setClass(class.className)">{{class.className}}</a>
+                <a ng-class="{ active:mainCtrl.isSet(class) }"
+                   href="" ng-click="mainCtrl.setClass(class)">{{class.className}}</a>
             </li>
         </ul>
     </div>
     <div class="col-md-8 classes-detail-panel">
-        <h1>This is where the classes detail would go</h1>
+        <div ng-if="mainCtrl.getClass() == null">
+            <h1>Pick a class from the left</h1>
+        </div>
 
+        <div ng-if="mainCtrl.getClass() != null">
+            <h1>Class name: {{mainCtrl.getClass().className}}</h1>
+            <p>Description: {{mainCtrl.getClass().description}}</p>
+        </div>
+
+
+        <div></div>
     </div>
 </div>

@@ -8,26 +8,29 @@ var bodyParser = require('body-parser');
 var http = require('http');
 var compress = require('compression');
 
+var login_hdlr = require('./private/handlers/login.js');
 var classes_hdlr = require('./private/handlers/classes.js');
 var students_hdlr = require('./private/handlers/students.js');
 var homework_hdlr = require('./private/handlers/homework.js');
-var login_hdlr = require('./private/handlers/login.js');
+
 
 // note for AT: this opens up a rest api - if you type in https://mysterious-river-9125.herokuapp.com/v1/classes.json
 // you will get a json object in with the classes data - which at the moment is just dummy stuff
 app.get('/v1/classes.json', classes_hdlr.list_all);
 
-/* get the teacher's students */
+
+/*
+/!* get the teacher's students *!/
 app.get('/v1/students/:teacher.json', students_hdlr.students_by_teacher);
 
-/* get the homework for a student */
+/!* get the homework for a student *!/
 app.get('/v1/student/homework/:student.json', homework_hdlr.homework_by_student);
 
-/* get the homeworks under a teacher */
+/!* get the homeworks under a teacher *!/
 app.get('/v1/teacher/homework/:teacher.json', homework_hdlr.homework_by_teacher);
 
-/* get questions on a specific homework */
-app.get('/v1/homework/questions/:homework.json', homework_hdlr.questions_by_homework);
+/!* get questions on a specific homework *!/
+app.get('/v1/homework/questions/:homework.json', homework_hdlr.questions_by_homework);*/
 
 app.use(compress());
 app.use(bodyParser.json());

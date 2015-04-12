@@ -28,7 +28,7 @@
                 });
         }
 
-        this.set = "Dummy Class 1";
+        this.set = null;
 
         this.isSet = function(name) {
             return name == this.set;
@@ -37,5 +37,9 @@
         this.setClass = function(name) {
             this.set = name;
         };
+
+        this.getClass = function() {
+            return this.set;
+        }
     }]);
 })();
