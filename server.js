@@ -13,11 +13,9 @@ var classes_hdlr = require('./private/handlers/classes.js');
 var students_hdlr = require('./private/handlers/students.js');
 var homework_hdlr = require('./private/handlers/homework.js');
 
-
-// note for AT: this opens up a rest api - if you type in https://mysterious-river-9125.herokuapp.com/v1/classes.json
-// you will get a json object in with the classes data - which at the moment is just dummy stuff
 app.get('/v1/classes.json', classes_hdlr.list_all);
 
+app.get('/v1/homework/:className.json', homework_hdlr.homework_by_class);
 
 /*
 /!* get the teacher's students *!/

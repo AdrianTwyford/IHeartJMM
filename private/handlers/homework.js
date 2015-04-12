@@ -115,3 +115,42 @@ exports.questions_by_homework = function(req, res) {
             ]
         });
 };
+
+exports.homework_by_class = function(req, res) {
+    var className = req.params.className;
+
+    helpers.send_success(res,
+        {
+            "className": className,
+            "homworks": [
+                {
+                    "id": 1,
+                    "name": "Homework 1",
+                    "questions": [
+                        {
+                            "question": "Some daft question with some stuff",
+                            "marks": 5
+                        },
+                        {
+                            "question": "Some daft question with some stuff, a bit harder this time",
+                            "marks": 10
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Homework 2",
+                    "questions": [
+                        {
+                            "question": "Some daft question with some stuff part 2",
+                            "marks": 5
+                        },
+                        {
+                            "question": "2 Some daft question with some stuff, a bit harder this time",
+                            "marks": 10
+                        }
+                    ]
+                }
+            ]
+        });
+};
