@@ -96,3 +96,22 @@ exports.homework_by_teacher = function(req, res) {
             ]
         });
 };
+
+exports.questions_by_homework = function(req, res) {
+    var homework = req.params.homework;
+
+    helpers.send_success(res,
+        {
+            "homework": homework,
+            "questions" : [
+                {
+                    "question": "Some daft question with some stuff",
+                    "marks": 5
+                },
+                {
+                    "question": "Some daft question with some stuff, a bit harder this time",
+                    "marks": 10
+                }
+            ]
+        });
+};

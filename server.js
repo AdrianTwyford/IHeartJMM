@@ -26,6 +26,9 @@ app.get('/v1/student/homework/:student.json', homework_hdlr.homework_by_student)
 /* get the homeworks under a teacher */
 app.get('/v1/teacher/homework/:teacher.json', homework_hdlr.homework_by_teacher);
 
+/* get questions on a specific homework */
+app.get('/v1/homework/questions/:homework.json', homework_hdlr.questions_by_homework);
+
 app.use(compress());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
