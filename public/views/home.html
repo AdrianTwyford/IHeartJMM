@@ -1,9 +1,9 @@
-<div class="container" ng-controller="ClassesController as classesCtrl">
+<div class="container" ng-controller="MainController as mainCtrl">
     <div class="col-md-3 classes-submenu">
         <ul>
-            <li ng-repeat="class in classesCtrl.classesData">
-                <a ng-class="{ active:classesCtrl.isSet(class.className) }"
-                   href="" ng-click="classesCtrl.setClass(class.className)">{{class.className}}</a>
+            <li ng-repeat="class in mainCtrl.classesData">
+                <a ng-class="{ active:mainCtrl.isSet(class.className) }"
+                   href="" ng-click="mainCtrl.setClass(class.className)">{{class.className}}</a>
             </li>
         </ul>
     </div>
