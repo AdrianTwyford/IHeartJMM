@@ -19,11 +19,11 @@ exports.students_by_teacher = function(req, res) {
 };
 
 exports.students_by_class = function(req, res) {
-    var  class = req.params.class;
+    var classes = req.params.classes;
 
     helpers.send_success(res,
         {
-            "class": class,
+            "classes": classes,
             "students" : [
                 {"studentName" : "Dummy student 1"},
                 {"studentName" : "Dummy student 2"},
