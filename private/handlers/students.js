@@ -1,5 +1,6 @@
 /**
  * Created by hamishdickson on 12/04/15.
+ * AT - Added students_by_class
  */
 var helpers = require('./helpers.js');
 
@@ -9,6 +10,20 @@ exports.students_by_teacher = function(req, res) {
     helpers.send_success(res,
         {
             "teacher": teacher,
+            "students" : [
+                {"studentName" : "Dummy student 1"},
+                {"studentName" : "Dummy student 2"},
+                {"studentName" : "Dummy student 3"}
+            ]
+        });
+};
+
+exports.students_by_class = function(req, res) {
+    var  class = req.params.class;
+
+    helpers.send_success(res,
+        {
+            "class": class,
             "students" : [
                 {"studentName" : "Dummy student 1"},
                 {"studentName" : "Dummy student 2"},
