@@ -3,7 +3,7 @@
  */
 (function () {
     var app = angular.module('MyApp', ['ngCookies', 'ngResource', 'ngMessages', 'ngRoute', 'mgcrea.ngStrap',
-        'main-controller', 'login-controller', 'navbar-controller']);
+        'main-controller', 'login-controller', 'navbar-controller', 'homework-controller']);
 
     app.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
         $locationProvider.html5Mode(true);
