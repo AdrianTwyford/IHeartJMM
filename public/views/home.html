@@ -1,6 +1,5 @@
 <div class="container" ng-controller="MainController as mainCtrl">
     <div class="col-md-2 classes-submenu">
-		<h1>Select a class from this list</h1>
         <ul>
             <li ng-repeat="class in mainCtrl.classesData">
                 <a ng-class="{ active:mainCtrl.isSet(class) }"
@@ -9,9 +8,9 @@
         </ul>
     </div>
     <div class="col-md-8 classes-detail-panel">
-        <!--<div ng-if="mainCtrl.getClass() == null">
+        <div ng-if="mainCtrl.getClass() == null">
             <h1>Pick a class from the left</h1>
-        </div>-->
+        </div>
 
         <div ng-if="mainCtrl.getClass() != null">
             <h1>Class name: {{mainCtrl.getClass().className}}</h1>
