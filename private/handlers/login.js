@@ -1,6 +1,3 @@
-/**
- * Created by hamishdickson on 05/04/15.
- */
 var helpers = require('./helpers.js');
 
 exports.login = function(req, res) {

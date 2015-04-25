@@ -1,6 +1,3 @@
-/**
- * Created by hamishdickson on 31/03/15.
- */
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var csso = require('gulp-csso');

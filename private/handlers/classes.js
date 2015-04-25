@@ -1,9 +1,10 @@
 /**
- * Created by hamishdickson on 03/04/15.
+ * Classes handler
+ *
+ * todo rename - class is a keyword in javascript
  */
 var helpers = require('./helpers.js');
 
-// note for AT: normally this would be the bit that comes out of a database
 exports.list_all = function(req, res) {
     helpers.send_success(res,
         { "classes" : [

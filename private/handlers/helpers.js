@@ -1,6 +1,3 @@
-/**
- * Created by hamishdickson on 03/04/15.
- */
 exports.version = '0.1.0';
 
 exports.make_error = function(err, msg) {
